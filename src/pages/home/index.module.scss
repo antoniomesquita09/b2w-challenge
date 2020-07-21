@@ -1,0 +1,29 @@
+.root {
+    flex: 1;
+    // height: 100vh;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    list-style: none;
+}
+  
+@media (max-width: 950px) {
+    ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+  
+@media (max-width: 800px) {
+    ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+  
+@media (max-width: 650px) {
+    ul {
+        grid-template-columns: 1fr;
+    }
+}
