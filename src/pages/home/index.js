@@ -56,11 +56,14 @@ const Home = () => {
         <div>
           <ul>
             {pokemons.map(
-              (pokemon, index) => (
-                //   index < currentPage * 10 && (
-                <PokemonCard key={pokemon.id} pokemon={pokemon} index={index} />
-              )
-              //   )
+              (pokemon, index) =>
+                index < currentPage * 10 && ( // TODO: improve paginate
+                  <PokemonCard
+                    key={pokemon.id}
+                    pokemon={pokemon}
+                    index={index}
+                  />
+                )
             )}
           </ul>
           {loadNewPage && (

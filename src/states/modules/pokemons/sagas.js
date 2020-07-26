@@ -37,6 +37,7 @@ function* getPokemon({ payload }) {
   const { pokemonId } = payload
   try {
     const { data } = yield call(api.get, `/pokemon/${pokemonId}`)
+    data.pokemonId = pokemonId
     yield put(getSinglePokemonSuccess(data))
   } catch (error) {
     yield put(getSinglePokemonFailure(error.toString()))

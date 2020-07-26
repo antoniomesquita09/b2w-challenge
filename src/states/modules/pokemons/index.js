@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import extend from 'lodash/extend'
 
-import { selectAllPokemons } from './selectors'
+import { selectAllPokemons, selectPokemonDetail } from './selectors'
 
 const initialState = {
   allPokemons: [],
@@ -23,7 +23,7 @@ const { actions, reducer } = createSlice({
       extend(state, {
         allPokemonsSprites: [
           ...state.allPokemonsSprites,
-          { ...payload.sprites },
+          { ...selectPokemonDetail(payload) },
         ],
       }),
   },
