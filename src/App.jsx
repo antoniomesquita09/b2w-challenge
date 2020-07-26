@@ -5,12 +5,11 @@ import { ToastContainer } from 'react-toastify'
 import store from 'states/store'
 
 import Routes from './App.routes'
-// import GlobalStyle from './styles/global';
+import 'styles/global.scss'
 
 function App() {
   return (
     <>
-      {/* <GlobalStyle /> */}
       <ToastContainer autoClose={3000} position='top-left' />
       <Provider store={store}>
         <Routes />

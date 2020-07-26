@@ -1,0 +1,23 @@
+.root {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 6px;
+    box-shadow: 0 0 16px rgba(148, 147, 147, 0.307774);
+    min-height: 800px;
+    width: 300px;
+}
+
+@media (max-width: 650px) {
+    .div {
+        width: 150px; //TODO: impro responsive cart
+    }
+}

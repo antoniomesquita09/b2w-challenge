@@ -23,9 +23,10 @@ export default function* rootSaga() {
   yield takeEvery(getSinglePokemon, getPokemon)
 }
 
-function* listPokemon() {
+function* listPokemon({ payload }) {
+  const { type } = payload
   try {
-    const { data } = yield call(api.get, '/type/1')
+    const { data } = yield call(api.get, `/type/${type}`)
     yield put(getAllPokemonsSuccess(data))
   } catch (error) {
     yield put(getAllPokemonsFailure(error.toString()))

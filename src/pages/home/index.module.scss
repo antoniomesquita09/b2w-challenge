@@ -1,22 +1,30 @@
 .root {
     flex: 1;
-    // height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
     gap: 20px;
     list-style: none;
 }
   
-@media (max-width: 950px) {
+@media (max-width: 1550px) {
+    ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+  
+@media (max-width: 1250px) {
     ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
   
-@media (max-width: 800px) {
+@media (max-width: 950px) {
     ul {
         grid-template-columns: 1fr 1fr;
     }

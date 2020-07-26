@@ -21,7 +21,7 @@ const PokemonCard = ({ pokemon, index }) => {
 
   useEffect(() => {
     if (pokemonSprites.length > 0) {
-      console.log(pokemonSprites)
+      //   console.log(pokemonSprites)
       setPokemonImage(pokemonSprites[index]?.front_default)
     }
   }, [pokemonSprites])
@@ -32,7 +32,7 @@ const PokemonCard = ({ pokemon, index }) => {
       <span>{id}</span>
       {pokemonSprites && <img src={pokemonImage} alt={`pokemon ${name}`} />}
       <h2>
-        Preco: <strong>R$15,00</strong>
+        Preço: <strong>R$15,00</strong>
       </h2>
     </li>
   )
