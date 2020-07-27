@@ -1,12 +1,17 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+
+import { getCartTotal } from 'states/modules/cart'
 
 import styles from './index.module.scss'
 
 const Cart = () => {
-  const { cart } = useSelector(({ cart }) => cart)
+  const dispatch = useDispatch()
+  const { cart, total } = useSelector(({ cart }) => cart)
 
-  //   console.log(cart)
+  useEffect(() => {
+    dispatch(getCartTotal())
+  }, [dispatch, cart])
 
   return (
     <div className={styles.root}>
@@ -17,6 +22,7 @@ const Cart = () => {
           <h3>R${item.price},00</h3>
         </div>
       ))}
+      <h2>Total: R${total},00</h2>
     </div>
   )
 }

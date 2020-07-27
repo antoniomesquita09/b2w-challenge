@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import Loader from 'react-loader-spinner'
 
 import { getAllPokemons } from 'states/modules/pokemons'
 
@@ -16,38 +15,9 @@ const Home = () => {
   const dispatch = useDispatch()
   const pokemons = useSelector(({ pokemons }) => pokemons.allPokemons)
 
-  const [currentPage, setCurrentPage] = useState(1)
-
-  const totalPages =
-    pokemons.length % 10
-      ? Math.floor(pokemons.length / 10) + 1
-      : Math.floor(pokemons.length / 10)
-
   useEffect(() => {
     dispatch(getAllPokemons({ type: pokemonType }))
   }, [dispatch, pokemonType])
-
-  const observer = useRef(
-    new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setCurrentPage(currentPage + 1)
-        }
-      },
-      { threshold: 1 }
-    )
-  )
-
-  const infiniteRef = useCallback(
-    (node) => {
-      if (node !== null) {
-        observer.current.observe(node)
-      }
-    },
-    [observer]
-  )
-
-  let loadNewPage = totalPages > 1 && totalPages > currentPage
 
   return (
     <>
@@ -57,26 +27,9 @@ const Home = () => {
           <ul>
             {pokemons.map(
               (pokemon, index) =>
-                index < currentPage * 10 && ( // TODO: improve paginate
-                  <PokemonCard
-                    key={pokemon.id}
-                    pokemon={pokemon}
-                    index={index}
-                  />
-                )
+                index < 10 && <PokemonCard key={pokemon.id} pokemon={pokemon} />
             )}
           </ul>
-          {loadNewPage && (
-            <div className='loader-block' ref={infiniteRef}>
-              <Loader
-                type='Oval'
-                color='#7d40e7'
-                height={20}
-                width={20}
-                timeout={3000} //3 secs
-              />
-            </div>
-          )}
         </div>
         <Cart />
       </div>

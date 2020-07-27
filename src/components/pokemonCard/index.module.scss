@@ -1,7 +1,15 @@
 .root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 15px;
     padding: 15px;
     border-radius: 6px;
     box-shadow: 0 0 16px rgba(148, 147, 147, 0.307774);
     max-width: 200px;
+}
+
+.icon {
+    cursor: pointer;
 }

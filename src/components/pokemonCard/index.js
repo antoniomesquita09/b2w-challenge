@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { object, number } from 'prop-types'
+import { object } from 'prop-types'
+import { MdRemoveShoppingCart as RemoveIcon } from 'react-icons/md'
 
 import { getSinglePokemon } from 'states/modules/pokemons'
-import { addToCart } from 'states/modules/cart'
+import { addToCart, removeFromCart } from 'states/modules/cart'
 
 import colors from 'styles/colors'
 
@@ -25,7 +26,7 @@ const PokemonCard = ({ pokemon }) => {
   }, [dispatch, id])
 
   useEffect(() => {
-    if (cart.length > 0) {
+    if (cart?.length > 0) {
       const isPokemonInCart =
         cart.findIndex((pokemon) => pokemon.id === id) !== -1
       setPokemonInCart(isPokemonInCart)
@@ -39,10 +40,20 @@ const PokemonCard = ({ pokemon }) => {
           .front_default
       )
     }
-  }, [pokemonsDetails])
+  }, [pokemonsDetails, id])
 
   const handleAddToCart = () => {
-    dispatch(addToCart({ item: pokemon }))
+    if (!isPokemonInCart) {
+      dispatch(addToCart({ item: pokemon }))
+    }
+  }
+
+  const handleRemoveFromCart = (e) => {
+    e.stopPropagation()
+    if (isPokemonInCart) {
+      dispatch(removeFromCart({ pokemonId: id }))
+      setPokemonInCart(false)
+    }
   }
 
   return (
@@ -51,26 +62,31 @@ const PokemonCard = ({ pokemon }) => {
       onClick={handleAddToCart}
       style={{
         backgroundColor: isPokemonInCart ? colors.greyLighter : colors.white,
+        cursor: !isPokemonInCart && 'pointer',
       }}
     >
       <h1>{name}</h1>
-      <span>{id}</span>
       {pokemonsDetails && <img src={pokemonImage} alt={`pokemon ${name}`} />}
       <h2>
         Preço: <strong>R${price},00</strong>
       </h2>
+      {isPokemonInCart && (
+        <RemoveIcon
+          color={colors.red}
+          onClick={handleRemoveFromCart}
+          className={styles.icon}
+        />
+      )}
     </li>
   )
 }
 
 PokemonCard.propTypes = {
   pokemon: object,
-  index: number,
 }
 
 PokemonCard.defaultProps = {
   pokemon: {},
-  index: 0,
 }
 
 export default PokemonCard
