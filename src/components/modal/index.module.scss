@@ -1,0 +1,17 @@
+.root {
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 6px;
+    box-shadow: 0 0 16px rgba(148, 147, 147, 0.307774);
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}

@@ -1,5 +1,5 @@
 .root {
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
     background-color: #fff;
@@ -14,6 +14,13 @@
     box-shadow: 0 0 16px rgba(148, 147, 147, 0.307774);
     min-height: 800px;
     width: 300px;
+    padding-bottom: 20px;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 @media (max-width: 650px) {

@@ -12,25 +12,25 @@ ul {
     list-style: none;
 }
   
-@media (max-width: 1550px) {
+@media (max-width: 1800px) {
     ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
   
-@media (max-width: 1250px) {
+@media (max-width: 1500px) {
     ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
   
-@media (max-width: 950px) {
+@media (max-width: 1200px) {
     ul {
         grid-template-columns: 1fr 1fr;
     }
 }
   
-@media (max-width: 650px) {
+@media (max-width: 900px) {
     ul {
         grid-template-columns: 1fr;
     }

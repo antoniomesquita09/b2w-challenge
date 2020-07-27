@@ -26,11 +26,9 @@ const PokemonCard = ({ pokemon }) => {
   }, [dispatch, id])
 
   useEffect(() => {
-    if (cart?.length > 0) {
-      const isPokemonInCart =
-        cart.findIndex((pokemon) => pokemon.id === id) !== -1
-      setPokemonInCart(isPokemonInCart)
-    }
+    const isPokemonInCart =
+      cart?.findIndex((pokemon) => pokemon.id === id) !== -1
+    setPokemonInCart(isPokemonInCart)
   }, [cart, id])
 
   useEffect(() => {

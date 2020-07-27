@@ -25,6 +25,9 @@ const { actions, reducer } = createSlice({
       )
       return extend(state, { total })
     },
+    cleanCart: (state) => {
+      return extend(state, { cart: [] })
+    },
   },
 })
 
@@ -33,6 +36,7 @@ export const {
   removeFromCart,
   pokemonInCart,
   getCartTotal,
+  cleanCart,
 } = actions
 
 export { default as cartSaga } from './sagas'
