@@ -48,7 +48,7 @@ Using the flag -u you can update the snapshots.
 You can see the website production version on:
 [https://pokemon-store-b2w.netlify.app/](https://pokemon-store-b2w.netlify.app/)
 
-### Change the last part of url to see diferent versions of Pokémon Store
+### Change the last part of the url to see diferent versions of Pokémon Store
 
 [https://pokemon-store-b2w.netlify.app/fire](Pokémon Store Fire)
 [https://pokemon-store-b2w.netlify.app/water](Pokémon Store Water)
