@@ -50,7 +50,7 @@ You can see the website production version on:
 
 ### Change the last part of the url to see diferent versions of Pokémon Store
 
-[Pokémon Store Fire](https://pokemon-store-b2w.netlify.app/fire)
-[Pokémon Store Water](https://pokemon-store-b2w.netlify.app/water)
-[Pokémon Store Dragon](https://pokemon-store-b2w.netlify.app/dragon)
-[Pokémon Store Grass](https://pokemon-store-b2w.netlify.app/grass)
+- [Pokémon Store Fire](https://pokemon-store-b2w.netlify.app/fire)<br />
+- [Pokémon Store Water](https://pokemon-store-b2w.netlify.app/water)
+- [Pokémon Store Dragon](https://pokemon-store-b2w.netlify.app/dragon)
+- [Pokémon Store Grass](https://pokemon-store-b2w.netlify.app/grass)
