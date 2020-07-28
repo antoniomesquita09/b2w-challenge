@@ -42,3 +42,8 @@ yarn test [-u]
 
 Launches the test runner in the interactive watch mode.
 Using the flag -u you can update the snapshots.
+
+### Pokemon Store
+
+You can see the website production version on:
+[https://pokemon-store-b2w.netlify.app/](https://pokemon-store-b2w.netlify.app/)
