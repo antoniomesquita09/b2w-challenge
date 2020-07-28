@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  pokemon-store:
+    stdin_open: true
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/pokemon-store/src
+      - ./public:/pokemon-store/public
+    ports:
+      - $PORT:$PORT
+    env_file:
+      - .env

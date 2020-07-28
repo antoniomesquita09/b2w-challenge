@@ -32,7 +32,7 @@ const Header = ({ type }) => {
         color: currentColor.font,
       }}
     >
-      <h1>Pokémons</h1>
+      <h1>Pokémon Store</h1>
       <h2 className={styles.subTitle}>
         Tipo: <span>{type}</span>
       </h2>
