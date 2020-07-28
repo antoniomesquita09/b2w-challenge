@@ -31,7 +31,7 @@ const Cart = ({ modal, setModal }) => {
         <h1>Carrinho</h1>
         {cart?.map((item) => (
           <div key={item.id} className={styles.item}>
-            <h2>{item.name}</h2>
+            <h2 data-testid='pokemon-name'>{item.name}</h2>
             <h3>R${item.price},00</h3>
           </div>
         ))}

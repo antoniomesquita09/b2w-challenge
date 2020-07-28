@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> Snapshot testing 1`] = `
+<DocumentFragment>
+  <div
+    class="root"
+  >
+    <input
+      class="input"
+      placeholder="Procure o seu pokemon pelo nome"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;

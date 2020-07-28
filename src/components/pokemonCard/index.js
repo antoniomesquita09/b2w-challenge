@@ -32,7 +32,7 @@ const PokemonCard = ({ pokemon }) => {
   }, [cart, id])
 
   useEffect(() => {
-    if (pokemonsDetails.length > 0) {
+    if (pokemonsDetails?.length > 0) {
       setPokemonImage(
         pokemonsDetails.find((pokemon) => pokemon.pokemonId === id)?.sprites
           .front_default
