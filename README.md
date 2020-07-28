@@ -1,4 +1,4 @@
-# Pokemon Store
+# Pokémon Store
 
 ## Getting started
 In the project directory, you can run:
@@ -43,7 +43,14 @@ yarn test [-u]
 Launches the test runner in the interactive watch mode.
 Using the flag -u you can update the snapshots.
 
-### Pokemon Store
+### Pokémon Store
 
 You can see the website production version on:
 [https://pokemon-store-b2w.netlify.app/](https://pokemon-store-b2w.netlify.app/)
+
+### Change the last part of url to see diferent versions of Pokémon Store
+
+[https://pokemon-store-b2w.netlify.app/fire](Pokémon Store Fire)
+[https://pokemon-store-b2w.netlify.app/water](Pokémon Store Water)
+[https://pokemon-store-b2w.netlify.app/dragon](Pokémon Store Dragon)
+[https://pokemon-store-b2w.netlify.app/grass](Pokémon Store Grass)
